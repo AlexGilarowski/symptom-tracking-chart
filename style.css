@@ -292,3 +292,38 @@ h2 {
     height: 350px;
   }
 }
+
+.medication-change-line {
+  stroke: #555b66;
+  stroke-width: 2px;
+  stroke-dasharray: 6 5;
+  opacity: 0.75;
+  pointer-events: none;
+  transition:
+    stroke-width 120ms ease,
+    opacity 120ms ease;
+}
+
+.medication-change-line.medication-line-highlighted {
+  stroke-width: 4px;
+  opacity: 1;
+}
+
+.medication-change-hover-target {
+  stroke: transparent;
+  stroke-width: 16px;
+  cursor: pointer;
+  pointer-events: stroke;
+}
+
+.tooltip-medication-symbol {
+  width: 4px;
+  height: 17px;
+  border-left: 3px dashed #d7d9de;
+}
+
+.tooltip-medication-change {
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 1.5;
+}

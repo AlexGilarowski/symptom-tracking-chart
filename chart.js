@@ -74,12 +74,27 @@ const chart = svg
 const tooltip = d3.select("#tooltip");
 
 d3.csv("data.csv", row => {
+  //*const parsedRow = {
+    //date: parseDate(row.date),
+    //period:
+      //String(row.period).trim().toLowerCase() === "yes",
+    //notes: row.notes ? row.notes.trim() : ""
+  //};
+
   const parsedRow = {
-    date: parseDate(row.date),
-    period:
-      String(row.period).trim().toLowerCase() === "yes",
-    notes: row.notes ? row.notes.trim() : ""
-  };
+  date: parseDate(row.date),
+
+  period:
+    String(row.period).trim().toLowerCase() === "yes",
+
+  notes:
+    row.notes ? row.notes.trim() : "",
+
+  medicationChange:
+    row.medicationChange
+      ? row.medicationChange.trim()
+      : ""
+};
 
   symptoms.forEach(symptom => {
     const value = row[symptom.key];
@@ -118,7 +133,7 @@ d3.csv("data.csv", row => {
   });
 
 function drawChart(data) {
-  const startDate = d3.timeDay.offset(
+  /*const startDate = d3.timeDay.offset(
     d3.min(data, row => row.date),
     -0.5
   );
@@ -126,7 +141,17 @@ function drawChart(data) {
   const endDate = d3.timeDay.offset(
     d3.max(data, row => row.date),
     0.5
-  );
+  ); */
+
+const startDate = d3.timeDay.offset(
+  d3.min(data, row => row.date),
+  -1
+);
+
+const endDate = d3.timeDay.offset(
+  d3.max(data, row => row.date),
+  1
+);
 
   const x = d3
     .scaleTime()
@@ -163,6 +188,57 @@ function drawChart(data) {
     )
     .attr("height", innerHeight)
     .attr("class", "period-band");
+
+    /*
+ * MEDICATION CHANGE LINES
+ */
+const medicationChanges = data.filter(
+  row => row.medicationChange
+);
+
+const medicationChangeGroup = chart
+  .append("g")
+  .attr("class", "medication-change-lines");
+
+medicationChangeGroup
+  .selectAll(".medication-change-line")
+  .data(medicationChanges)
+  .join("line")
+  .attr("class", "medication-change-line")
+  .attr("x1", row => x(row.date))
+  .attr("x2", row => x(row.date))
+  .attr("y1", 0)
+  .attr("y2", innerHeight);
+
+/*
+ * Wider invisible target to make each line
+ * easier to hover.
+ */
+medicationChangeGroup
+  .selectAll(".medication-change-hover-target")
+  .data(medicationChanges)
+  .join("line")
+  .attr("class", "medication-change-hover-target")
+  .attr("x1", row => x(row.date))
+  .attr("x2", row => x(row.date))
+  .attr("y1", 0)
+  .attr("y2", innerHeight)
+  .on("mouseenter", function (event, row) {
+    d3.select(this.previousSibling)
+      .classed("medication-line-highlighted", true);
+
+    showMedicationTooltip(event, row);
+  })
+  .on("mousemove", function (event, row) {
+    showMedicationTooltip(event, row);
+  })
+  .on("mouseleave", function () {
+    medicationChangeGroup
+      .selectAll(".medication-change-line")
+      .classed("medication-line-highlighted", false);
+
+    hideTooltip();
+  });
 
   chart
     .append("g")
@@ -496,6 +572,27 @@ function createLegend() {
 
     hideTooltip();
   });
+}
+
+function showMedicationTooltip(event, row) {
+  tooltip
+    .style("display", "block")
+    .html(`
+      <div class="tooltip-variable">
+        <span class="tooltip-medication-symbol"></span>
+        Medication change
+      </div>
+
+      <div class="tooltip-date">
+        ${formatDate(row.date)}
+      </div>
+
+      <div class="tooltip-medication-change">
+        ${escapeHtml(row.medicationChange)}
+      </div>
+    `);
+
+  positionTooltip(event);
 }
 
 /*
