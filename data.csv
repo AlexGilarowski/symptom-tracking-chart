@@ -1,36 +1,36 @@
-date,obsessiveThoughts,anxiety,ocdAnxiety,specialAnxiety,irritability,silliness,period,notes
-2026-07-01,5,0,5,0,0,,,
-2026-07-02,5,0,3,0,0,,,
-2026-07-03,5,0,5,0,4,,,
-2026-07-04,5,0,5,0,5,,,
-2026-07-05,5,0,5,0,0,,yes,
-2026-07-06,5,0,4,0,0,,yes,
-2026-07-07,5,0,3.5,0,0,,yes,
-2026-07-08,5,0,4.5,0,1.5,2,yes,
-2026-07-09,5,0,4,0,0,3,yes,
-2026-07-10,5,0,4,0,0,2,yes,
-2026-07-11,5,0,4,0,0,0,yes,
-2026-07-12,5,0,4,0,0,0,,
-2026-07-13,5,0,4,0,0,5,,
-2026-07-14,5,0,4,0,0,0,,
-2026-07-15,5,0,4,0,0,0,,
-2026-07-16,4.5,0,4,0,0,0,,
-2026-07-17,4.5,0,4,0,0,0,,
-2026-07-18,4.5,0,4,0,0,0,,
-2026-07-19,4.5,0,4,0,0,0,,
-2026-07-20,4.5,0,4,0,0,0,,
-2026-07-21,4.5,0,4,0,0,0,,
-2026-07-22,5,0,5,0,1,0,,"Lowered evening buspar to 5mg. Irritated in the morning, stayed home"
-2026-07-23,4.5,0,4,0,0.5,1.5,,"Irritable in the AM for a few minutes"
-2026-07-24,4.5,0,4,0,0.5,1.5,,"Irritable in the AM for a few minutes"
-2026-07-25,5,0,5,0,2.5,0,,"Aggression 2.5,bit herself and scratched mom"
-2026-07-26,5,0,2,0,0,0,,"Great day at Jones Beach, no anxiety, even about waves."
-2026-07-27,5,0,1.5,0,0,0,,"Great day at camp and at home."
-2026-07-28,5,0,4,0,3,0,,
-2026-07-29,5,0,2,0,1.5,0,,"2-3 small outbursts throughout the day, no scalation. Stayed home from camp to sleep longer."
-2026-07-30,5,0,0.5,0,0,0,,"Great day at camp and at home."
-2026-07-31,4.5,0,2,0,0,0,,"Lowered afternoon BUS to 5mg."
-2026-08-01,4.5,0,2.5,0,1,0,yes,
-2026-08-02,5,0,3.5,0,1,0,yes,
-2026-08-03,5,0,2.5,0,0.5,0.5,yes
-2026-08-04,5,0,2.5,0,0,0.5,yes,
+date,obsessiveThoughts,anxiety,ocdAnxiety,specialAnxiety,irritability,silliness,period,notes,medicationChange
+2026-07-01,5,0,5,0,0,,,"Lowered AM BUS to 5mg."
+2026-07-02,5,0,3,0,0,,,,
+2026-07-03,5,0,5,0,4,,,,
+2026-07-04,5,0,5,0,5,,,,
+2026-07-05,5,0,5,0,0,,yes,,
+2026-07-06,5,0,4,0,0,,yes,,
+2026-07-07,5,0,3.5,0,0,,yes,,
+2026-07-08,5,0,4.5,0,1.5,2,yes,,
+2026-07-09,5,0,4,0,0,3,yes,,
+2026-07-10,5,0,4,0,0,2,yes,,
+2026-07-11,5,0,4,0,0,0,yes,,
+2026-07-12,5,0,4,0,0,0,,,
+2026-07-13,5,0,4,0,0,5,,,
+2026-07-14,5,0,4,0,0,0,,,
+2026-07-15,5,0,4,0,0,0,,,
+2026-07-16,4.5,0,4,0,0,0,,,
+2026-07-17,4.5,0,4,0,0,0,,,
+2026-07-18,4.5,0,4,0,0,0,,,
+2026-07-19,4.5,0,4,0,0,0,,,
+2026-07-20,4.5,0,4,0,0,0,,,
+2026-07-21,4.5,0,4,0,0,0,,,
+2026-07-22,5,0,5,0,1,0,,,"Lowered evening buspar to 5mg. Irritated in the morning, stayed home"
+2026-07-23,4.5,0,4,0,0.5,1.5,,"Irritable in the AM for a few minutes",
+2026-07-24,4.5,0,4,0,0.5,1.5,,"Irritable in the AM for a few minutes",
+2026-07-25,5,0,5,0,2.5,0,,"Aggression 2.5,bit herself and scratched mom",
+2026-07-26,5,0,2,0,0,0,,"Great day at Jones Beach, no anxiety, even about waves.",
+2026-07-27,5,0,1.5,0,0,0,,"Great day at camp and at home.",
+2026-07-28,5,0,4,0,3,0,,,
+2026-07-29,5,0,2,0,1.5,0,,"2-3 small outbursts throughout the day, no scalation. Stayed home from camp to sleep longer.",
+2026-07-30,5,0,0.5,0,0,0,,"Great day at camp and at home.",
+2026-07-31,4.5,0,2,0,0,0,,,"Lowered afternoon BUS to 5mg."
+2026-08-01,4.5,0,2.5,0,1,0,yes,,
+2026-08-02,5,0,3.5,0,1,0,yes,,
+2026-08-03,5,0,2.5,0,0.5,0.5,yes,,
+2026-08-04,5,0,2.5,0,0,0.5,yes,,
